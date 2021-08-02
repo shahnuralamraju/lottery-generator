@@ -46,17 +46,19 @@ choseBtn.addEventListener('click', () => {
         if (randomNumber == 6) {
             selectedName.innerText = "Chironjit";
         }
-        // selectedTopic.innerText = randomNumber;
     }
 });
+
+let topicArray = createArray(1, 6);
+
 topicBtn.addEventListener('click', () => {
-    if (numArray.length == 0) {
+    if (topicArray.length == 0) {
         selectedTopic.innerHTML = "Thank You the lottery process is End"
     }
     else {
-        let randomIndex = getRandomNumber(0, numArray.length - 1)
-        let randomNumber = numArray[randomIndex];
-        numArray.splice(randomIndex, 1);
+        let randomIndex = getRandomNumber(0, topicArray.length - 1)
+        let randomNumber = topicArray[randomIndex];
+        topicArray.splice(randomIndex, 1);
         if (randomNumber == 1) {      
             selectedTopic.innerText = "আদিম ও মধ্যযুগ";
         }
@@ -75,7 +77,6 @@ topicBtn.addEventListener('click', () => {
         if (randomNumber == 6) {
             selectedTopic.innerText = "বঙ্গবন্ধুর জীবনী";
         }
-        // selectedTopic.innerText = randomNumber;
     }
 });
 
